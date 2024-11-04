@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Geometriai számítások</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div id="tartalom">
+        <h1>Dolgozat</h1>
+
+        <!-- a számolás kerete -->
+        <div id="szamol">
+            <!-- rombusz -->
+            <h3>Rombusz</h3>
+
+            <label for="rombuszOldal">Oldal:</label>
+            <input type="number" id="rombuszOldal">
+            <br>
+            <label for="rombuszMagassag">Magasság:</label>
+            <input type="number" id="rombuszMagassag">
+
+            <div>
+                <input type="button" value="Kerület" onclick="szamolRombuszKerulet()">
+                <input type="button" value="Terület" onclick="szamolRombuszTerulet()">
+            </div>
+        </div>
+
+        <!-- eredmény kerete -->
+        <div id="eredmeny">
+            <h3>Eredmények:</h3>
+
+            <p>Kerület: <span id="eredmenyKerulet"></span></p>
+            <p>Terület: <span id="eredmenyTerulet"></span></p>
+
+            <input type="button" value="Törlés" onclick="torles()">
+        </div>
+    </div>
 </body>
+<script src="kod.js"></script>
 </html>
